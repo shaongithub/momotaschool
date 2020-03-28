@@ -4,7 +4,7 @@ body {
 	color:#707478;
 }
 
-.logo{ 
+.logo{
 	width:50px;
 	height:50px;
 	text-align:center;
@@ -27,7 +27,7 @@ p {
 }
 
 table {
-	width:100%; 
+	width:100%;
 	border-spacing:0px;
 	font-size: 10px;
 	padding: 0px;
@@ -44,8 +44,8 @@ td, th {
 	text-align: left;
 }
 
-.pull-left { 
-	float: left; 
+.pull-left {
+	float: left;
 	text-align: left;
 	width: 35%;
 	margin: 0px;
@@ -53,7 +53,7 @@ td, th {
 }
 
 .pull-right {
-	float: right; 
+	float: right;
 	text-align: right;
 	width: 35%;
 	margin: 0px;

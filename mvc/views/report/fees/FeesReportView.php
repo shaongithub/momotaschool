@@ -77,7 +77,7 @@
                 </div>
 
             </div>
-
+        
         </div><!-- row -->
     </div><!-- Body -->
 </div><!-- /.box -->
@@ -148,7 +148,7 @@
 
     $(document).on('change', "#sectionID", function() {
         $('#load_feesreport').html("");
-        
+
         $('#studentID').html("<option value='0'>" + "<?=$this->lang->line("feesreport_please_select")?>" +"</option>");
         $('#studentID').val(0);
 
@@ -166,7 +166,7 @@
                 }
             });
         }
-    }); 
+    });
 
     $(document).on('change', "#studentID", function() {
         $('#load_feesreport').html("");
@@ -267,5 +267,3 @@
         }
     }
 </script>
-
-

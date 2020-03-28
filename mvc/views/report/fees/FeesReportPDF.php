@@ -7,19 +7,19 @@
             </div>
             <div class="box-header bg-gray">
                 <h3 class="box-title text-navy"><i class="fa fa-clipboard"></i>
-                    <?=$this->lang->line('feesreport_report_for')?> - 
+                    <?=$this->lang->line('feesreport_report_for')?> -
                     <?=$this->lang->line('feesreport_fees');?>
                 </h3>
             </div><!-- /.box-header -->
-            
+
             <?php if($classesID >= 0 && $sectionID >= 0) { ?>
                 <div class="col-sm-12">
                     <h5 class="pull-left">
-                        <?php 
+                        <?php
                             echo $this->lang->line('feesreport_class')." : ";
                             echo isset($classes[$classesID]) ? $classes[$classesID] : $this->lang->line('feesreport_all_class');
                         ?>
-                    </h5>                         
+                    </h5>
                     <h5 class="pull-right">
                         <?php
                            echo $this->lang->line('feesreport_section')." : ";
@@ -42,7 +42,7 @@
                                     <th><?=$this->lang->line('feesreport_class')?></th>
                                 <?php } ?>
 
-                                <?php if(!($sectionID > 0)) { ?> 
+                                <?php if(!($sectionID > 0)) { ?>
                                     <th><?=$this->lang->line('feesreport_section')?></th>
                                 <?php } ?>
                                 <th><?=$this->lang->line('feesreport_roll')?></th>
@@ -64,24 +64,24 @@
                                         <td><?=$i?></td>
 
                                         <td><?=date('d M Y',strtotime($getFeesReport->paymentdate))?></td>
-                                        
+
                                         <td><?=isset($students[$getFeesReport->studentID]) ? $students[$getFeesReport->studentID]->srname : '' ?></td>
-                                        
+
                                         <td>
                                             <?=isset($students[$getFeesReport->studentID]) ? $students[$getFeesReport->studentID]->srregisterNO : '' ?>
                                         </td>
 
                                         <?php if(!($classesID > 0)) {  ?>
-                                            <td> 
+                                            <td>
                                                 <?php
                                                     if(isset($students[$getFeesReport->studentID])) {
                                                         $stclassID = $students[$getFeesReport->studentID]->srclassesID;
                                                         echo isset($classes[$stclassID]) ? $classes[$stclassID] : '';
-                                                    } 
+                                                    }
                                                 ?>
                                             </td>
                                         <?php } ?>
-                                        
+
 
                                         <?php if(!($sectionID > 0)) { ?>
                                             <td>
@@ -97,7 +97,7 @@
 
                                         <td><?=isset($students[$getFeesReport->studentID]) ? $students[$getFeesReport->studentID]->srroll : '' ?></td>
                                         <td>
-                                            <?php 
+                                            <?php
                                                 if(isset($invoices[$getFeesReport->invoiceID])) {
                                                     $feetypeID = $invoices[$getFeesReport->invoiceID];
                                                     if(isset($feetypes[$feetypeID])) {
@@ -107,23 +107,23 @@
                                             ?>
                                         </td>
                                         <td>
-                                            <?php 
+                                            <?php
                                                 echo number_format($getFeesReport->paymentamount,2);
                                                 $totalPaid += $getFeesReport->paymentamount;
                                             ?>
                                         </td>
                                         <td>
-                                            <?php 
+                                            <?php
                                                 if(isset($weaverandfine[$getFeesReport->paymentID])) {
                                                     echo number_format($weaverandfine[$getFeesReport->paymentID]->weaver,2);
-                                                    $totalWeaver += $weaverandfine[$getFeesReport->paymentID]->weaver; 
+                                                    $totalWeaver += $weaverandfine[$getFeesReport->paymentID]->weaver;
                                                 } else {
                                                     echo number_format(0,2);
                                                 }
                                             ?>
                                         </td>
                                         <td>
-                                            <?php 
+                                            <?php
                                                 if(isset($weaverandfine[$getFeesReport->paymentID])) {
                                                     echo  number_format($weaverandfine[$getFeesReport->paymentID]->fine,2);
                                                     $totalFine += number_format($weaverandfine[$getFeesReport->paymentID]->fine,2);
@@ -135,7 +135,7 @@
                                     </tr>
                                 <?php } } ?>
                                 <tr>
-                                    <?php 
+                                    <?php
                                         $colspan = 6;
                                         if($classesID == 0) {
                                             $colspan = 7;
@@ -163,10 +163,7 @@
                     </div>
                 <?php } ?>
             </div>
-            <div class="col-sm-12 text-center footerAll">
-                <?=reportfooter($siteinfos, $schoolyearsessionobj, true)?>
-            </div>
+            <p align="center">Copyright &copy; Momota Combined High & International School. Hotline:-01926958196 | Desgin & Developed by Codectechit LTD</p>
         </div><!-- row -->
     </div><!-- Body -->
 </div>
-

@@ -18,6 +18,7 @@ $lang['idcardreport_gender'] = "Gender";
 $lang['idcardreport_email'] = "Email";
 $lang['idcardreport_registerNO'] = "ID NO";
 $lang['idcardreport_roll'] = "Roll";
+$lang['idcardreport_studentgroup'] = "Group";
 $lang['idcardreport_blood_group'] = "Blood Group";
 $lang['idcardreport_designation'] = "Designation";
 $lang['idcardreport_jod'] = "Joining Date";

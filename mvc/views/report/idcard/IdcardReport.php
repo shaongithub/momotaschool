@@ -254,6 +254,11 @@
                                                 <p><span><b><?=$this->lang->line('idcardreport_roll')?></b> </span> <?=$idcard->srroll?></p>
                                             </div>
                                             <div class="profile-view-tab">
+                                                <p><span><b><?=$this->lang->line('idcardreport_studentgroup')?></b></span></p> <?php if($idcard->srstudentgroupID=="1") { echo "<p>Science</p>"; }
+                                                 else if($idcard->srstudentgroupID=="2") {echo "<p>Arts</p>";} else echo "<p>Commerce</p>"; ?>
+
+                                            </div>
+                                            <div class="profile-view-tab">
                                                 <p><span><b><?=$this->lang->line('idcardreport_blood_group')?></b> </span> <?=$idcard->bloodgroup?></p>
                                             </div>
                                         <?php } else { ?>

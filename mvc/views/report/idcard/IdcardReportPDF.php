@@ -66,7 +66,6 @@
                 <?php } elseif($usertypeID == 3) { ?>
                     <div class="idcardreport-info">
                         <div class="idcardreport-item">
-
                             <div class="center"> <b><?=$idcard->srname?></b></div>
                         </div>
                         <div class="idcardreport-item">
@@ -84,6 +83,11 @@
                         <div class="idcardreport-item">
                             <div class="left"><b><?=$this->lang->line('idcardreport_roll')?></b></div>
                             <div class="right">: <?=$idcard->srroll?></div>
+                        </div>
+                        <div class="idcardreport-item">
+                            <div class="left"><b><?=$this->lang->line('idcardreport_studentgroup')?></b></div>
+                            <div class="right">:<?php if($idcard->srstudentgroupID=="1") { echo "<p> Science</p>"; }
+                            else if($idcard->srstudentgroupID=="2") {echo "<p> Arts</p>";} else echo "<p> Commerce</p>"; ?></div>
                         </div>
                         <div class="idcardreport-item">
                             <div class="left"><b><?=$this->lang->line('idcardreport_blood_group')?></b></div>

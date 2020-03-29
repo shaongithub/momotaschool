@@ -239,7 +239,7 @@
                                             </div>
                                         <?php } elseif($usertypeID == 3) { ?>
                                             <div class="profile-view-tab">
-                                                <div class="center"> <b><?=$idcard->srname?></b></div>
+                                                <div class="center"<b><?=$idcard->srname?></b></div>
                                             </div>
                                             <div class="profile-view-tab">
                                                 <p><span><b><?=$this->lang->line('idcardreport_registerNO')?></b> </span> <?=$idcard->srregisterNO?></p>
@@ -254,8 +254,8 @@
                                                 <p><span><b><?=$this->lang->line('idcardreport_roll')?></b> </span> <?=$idcard->srroll?></p>
                                             </div>
                                             <div class="profile-view-tab">
-                                               <p><span><b><?=$this->lang->line('idcardreport_studentgroup')?></b></span></p> <?php if($idcard->srstudentgroupID=="1") { echo "<p>Science</p>"; }
-                                                else if($idcard->srstudentgroupID=="2") {echo "<p>Arts</p>";} else echo "<p>Commerce</p>"; ?>
+                                               <p><span><b><?=$this->lang->line('idcardreport_studentgroup')?></b></span></p> <?php if($idcard->srstudentgroupID=="1"){ echo"Science"; }
+                                                else if($idcard->srstudentgroupID=="2"){echo"Arts";}else echo"Commerce"; ?>
 
                                            </div>
                                             <div class="profile-view-tab">

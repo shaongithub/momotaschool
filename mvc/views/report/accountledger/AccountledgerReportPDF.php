@@ -17,7 +17,7 @@
             </div>
             <?php if($fromdate !='' && $todate !='') { ?>
                 <div>
-                    <h5 class="pull-left"><?=$this->lang->line('accountledgerreport_fromdate')?> : <?=date('d M Y',$fromdate)?></h5>  
+                    <h5 class="pull-left"><?=$this->lang->line('accountledgerreport_fromdate')?> : <?=date('d M Y',$fromdate)?></h5>
                     <h5 class="pull-right"><?=$this->lang->line('accountledgerreport_todate')?> : <?=date('d M Y',$todate)?></h5>
                 </div>
             <?php } ?>
@@ -64,7 +64,7 @@
                         <tr>
                             <td><?=$this->lang->line('accountledgerreport_grand_total')?> <span class="text-bold"><?=!empty($siteinfos->currency_code) ? "(".$siteinfos->currency_code.")" : ''?></span></td>
                             <td>
-                                <?php 
+                                <?php
                                     $mainincome  = ($totalincome + $totalcollection + $totalfine);
                                     $mainexpense = ($totalexpense + $totalsalarypayment);
                                     $mainbalance  = ($mainincome - $mainexpense);
@@ -75,7 +75,7 @@
                     </table>
                 </div>
                 <div class="singleaccountledger marginledger">
-                
+
                     <table class="ledgertable">
                         <tr>
                             <td class="text-bold" colspan="2"><?=$this->lang->line('accountledgerreport_fees_collections')?></td>
@@ -88,8 +88,8 @@
                             <td><?=number_format($totalcollection,2)?></td>
                         </tr>
                     </table>
-                
-               
+
+
                     <table class="ledgertable">
                         <tr>
                             <td class="text-bold" colspan="2"><?=$this->lang->line('accountledgerreport_fines')?></td>
@@ -114,7 +114,7 @@
                             <td><?=number_format($totalexpense,2)?></td>
                         </tr>
                     </table>
-                    
+
                     <table class="ledgertable">
                         <tr>
                             <td class="text-bold" colspan="2"><?=$this->lang->line('accountledgerreport_salary')?></td>
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div class="text-center footerAll">
-                <?=reportfooter($siteinfos, $schoolyearsessionobj, true)?>
+                <p align="center">Copyright &copy; Momota Combined High & International School. Hotline:-01926958196 | Desgin & Developed by Codectechit LTD</p> 
             </div>
         </div><!-- row -->
     </div><!-- Body -->

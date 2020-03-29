@@ -51,3 +51,5 @@ ERROR - 2020-03-28 21:08:06 --> Could not find the language line "idcardreport_s
 ERROR - 2020-03-28 21:08:06 --> Could not find the language line "idcardreport_studentgroup"
 ERROR - 2020-03-28 21:08:06 --> Could not find the language line "idcardreport_studentgroup"
 ERROR - 2020-03-28 21:08:06 --> Could not find the language line "idcardreport_studentgroup"
+ERROR - 2020-03-28 22:18:02 --> Severity: Parsing Error --> syntax error, unexpected '<' C:\xampp\htdocs\school\mvc\views\report\idcard\IdcardReport.php 257
+ERROR - 2020-03-28 22:18:04 --> Severity: Parsing Error --> syntax error, unexpected '<' C:\xampp\htdocs\school\mvc\views\report\idcard\IdcardReport.php 257

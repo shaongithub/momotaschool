@@ -5,7 +5,7 @@
                 $pdf_preview_uri = base_url('accountledgerreport/pdf/'.$schoolyearID.'/'.strtotime($fromdate).'/'.strtotime($todate));
             } else {
                 $pdf_preview_uri = base_url('accountledgerreport/pdf/'.$schoolyearID);
-            } 
+            }
             echo btn_printReport('accountledgerreport', $this->lang->line('report_print'), 'printablediv');
             echo btn_pdfPreviewReport('accountledgerreport',$pdf_preview_uri, $this->lang->line('report_pdf_preview'));
             echo btn_sentToMailReport('accountledgerreport', $this->lang->line('report_send_pdf_to_mail'));
@@ -14,8 +14,8 @@
 </div>
 <div class="box">
     <div class="box-header bg-gray">
-        <h3 class="box-title text-navy"><i class="fa fa-clipboard"></i> 
-            <?=$this->lang->line('accountledgerreport_report_for')?> - <?=$this->lang->line('accountledgerreport_accountledger')?> 
+        <h3 class="box-title text-navy"><i class="fa fa-clipboard"></i>
+            <?=$this->lang->line('accountledgerreport_report_for')?> - <?=$this->lang->line('accountledgerreport_accountledger')?>
         </h3>
     </div><!-- /.box-header -->
     <div id="printablediv">
@@ -53,15 +53,15 @@
                         <p class="title"><?=$siteinfos->sname?></p>
                         <p class="title-desc"><?=$siteinfos->address?></p>
                         <p class="title-desc"><?=$this->lang->line('topbar_academic_year'). ' : '. $schoolyearName?></p>
-                    </div> 
+                    </div>
                 </div>
                 <?php $m = true; if($fromdate !='' && $todate !='') { $m = false; ?>
                     <div class="col-sm-12">
-                        <h5 class="pull-left"><?=$this->lang->line('accountledgerreport_fromdate')?> : <?=date('d M Y',strtotime($fromdate))?></h5>                         
+                        <h5 class="pull-left"><?=$this->lang->line('accountledgerreport_fromdate')?> : <?=date('d M Y',strtotime($fromdate))?></h5>
                         <h5 class="pull-right"><?=$this->lang->line('accountledgerreport_todate')?> : <?=date('d M Y',strtotime($todate))?></h5>
                     </div>
                 <?php } ?>
-                
+
                 <div class="col-sm-12 accountledgerreport" style="<?=$m ? "margin-top: 15px" :''?>">
                     <div class="row">
                         <div class="singleaccountledger">
@@ -105,7 +105,7 @@
                                 <tr>
                                     <td><?=$this->lang->line('accountledgerreport_grand_total')?> <span class="text-bold"><?=!empty($siteinfos->currency_code) ? "(".$siteinfos->currency_code.")" : ''?></span></td>
                                     <td>
-                                        <?php 
+                                        <?php
                                             $mainincome  = ($totalincome + $totalcollection + $totalfine);
                                             $mainexpense = ($totalexpense + $totalsalarypayment);
                                             $mainbalance  = ($mainincome - $mainexpense);
@@ -115,10 +115,10 @@
                                 </tr>
                             </table>
                         </div>
-                  
+
 
                         <div class="singleaccountledger">
-                        
+
                             <table class="table table-bordered marginledgerreport">
                                 <tr>
                                     <td class="text-bold" colspan="2"><?=$this->lang->line('accountledgerreport_fees_collections')?></td>
@@ -131,7 +131,7 @@
                                     <td><?=number_format($totalcollection,2)?></td>
                                 </tr>
                             </table>
-                        
+
                             <table class="table table-bordered marginledgerreport">
                                 <tr>
                                     <td class="text-bold" colspan="2"><?=$this->lang->line('accountledgerreport_fines')?></td>
@@ -173,10 +173,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-sm-12 text-center footerAll">
-                    <?=reportfooter($siteinfos, $schoolyearsessionobj)?>
-                </div>
+        <p align="center">Copyright &copy; Momota Combined High & International School. Hotline:-01926958196 | Desgin & Developed by Codectechit LTD</p>
             </div><!-- row -->
         </div><!-- Body -->
     </div>
@@ -254,7 +251,7 @@
 <!-- email end here -->
 
 <script type="text/javascript">
-    
+
     function check_email(email) {
         var status = false;
         var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -270,8 +267,8 @@
 
     $('#send_pdf').click(function() {
         var field = {
-            'to'          : $('#to').val(), 
-            'subject'     : $('#subject').val(), 
+            'to'          : $('#to').val(),
+            'subject'     : $('#subject').val(),
             'message'     : $('#message').val(),
             'fromdate'    : '<?=$fromdate?>',
             'todate'      : '<?=$todate?>',

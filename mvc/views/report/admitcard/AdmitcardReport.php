@@ -10,7 +10,7 @@
 </div>
 <div class="box">
     <div class="box-header bg-gray">
-        <h3 class="box-title text-navy"><i class="fa fa-clipboard"></i> 
+        <h3 class="box-title text-navy"><i class="fa fa-clipboard"></i>
         <?=$this->lang->line('admitcardreport_report_for')?> - <?=$this->lang->line('admitcardreport_admitcard')?>
         </h3>
     </div><!-- /.box-header -->
@@ -36,7 +36,7 @@
                 <?php } ?>
             }
 
-            .studentinfo { 
+            .studentinfo {
                 width: 100%;
             }
 
@@ -76,7 +76,7 @@
                 margin-top: -20px;
             }
 
-            .subjectlist table { 
+            .subjectlist table {
                 text-align: center;
                 font-size: 10px;
                 width: 100%;
@@ -94,7 +94,7 @@
                 margin-top: 15px;
                 color: #000;
             }
-            
+
             .account_signature {
                 float: left;
             }
@@ -105,12 +105,12 @@
 
 
             .mainadmincardreport .admincardreport h2 {
-                color: #700CE8;
+                color: #000000;
                 margin-bottom: 0px;
             }
 
             .mainadmincardreport .admincardreport h5 {
-                color: #DBA912;
+                color: #000000;
             }
 
             .mainadmincardreport img {
@@ -133,11 +133,11 @@
             .admitcardreportbackend ol{
                 padding-left: 10px;
             }
-            
+
             .admitcardreportbackend ol li{
                 line-height: 20px;
             }
-            
+
             .admitcardreportbackend ol li span{
                 font-weight: 600
             }
@@ -164,15 +164,15 @@
                                                 }
                                             ?>
                                         </td>
-                                        <td style="width:84%"> 
-                                            <h2><?=$siteinfos->sname?></h2>
-                                            <h5><?=$siteinfos->address?></h5> 
+                                        <td style="width:84%">
+                                            <h2 color="black"><?=$siteinfos->sname?></h2>
+                                            <h5 color="black"><?=$siteinfos->address?></h5>
                                         </td>
                                         <td style="width:8%">
                                             <img src="<?=imagelink($student->photo)?>" alt="">
                                         </td>
                                     </tr>
-                                    
+
                                 </table>
                                 <div class="admitcardbody">
                                     <h3><?=$examTitle?> <?=$this->lang->line('admitcardreport_exam_admit_card')?> - ( <?=$examYear?> )</h3>
@@ -185,7 +185,7 @@
                                             <p><span><?=$this->lang->line('admitcardreport_roll')?></span> : <?=$student->srroll?></p>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="subjectlist">
                                         <h3><?=$this->lang->line('admitcardreport_subject_appear')?></h3>
                                         <table>
@@ -194,6 +194,7 @@
                                                 <td><?=$this->lang->line('admitcardreport_subject_code')?></td>
                                                 <td><?=$this->lang->line('admitcardreport_subject_name')?></td>
                                                 <td><?=$this->lang->line('admitcardreport_subject_mark')?></td>
+                                                <td><?=$this->lang->line('admitcardreport_invisilator_signature')?></td>
                                             </tr>
                                             <?php $i= 0; if(count($subjects)) { foreach($subjects as $subject) { if($subject->type == 1) { $i++; ?>
                                                 <tr>
@@ -201,6 +202,7 @@
                                                     <td><?=$subject->subject_code?></td>
                                                     <td><?=$subject->subject?></td>
                                                     <td><?=$subject->finalmark?></td>
+                                                    <td></td>
                                                 </tr>
                                             <?php } } }
                                             if(isset($subjects[$student->sroptionalsubjectID])) { $opsubject = $subjects[$student->sroptionalsubjectID]; ?>
@@ -216,6 +218,8 @@
                                 </div>
                                 <div class="admitcardfooter">
                                     <span class="account_signature"></span>
+                                    <br>
+                                    <br>
                                     <span class="headmaster_signature"><?=$this->lang->line('admitcardreport_signature')?></span>
                                 </div>
                             </div>
@@ -315,7 +319,7 @@
 <!-- email end here -->
 
 <script type="text/javascript">
-    
+
     function check_email(email) {
         var status = false;
         var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -331,8 +335,8 @@
 
     $('#send_pdf').click(function() {
         var field = {
-            'to'          : $('#to').val(), 
-            'subject'     : $('#subject').val(), 
+            'to'          : $('#to').val(),
+            'subject'     : $('#subject').val(),
             'message'     : $('#message').val(),
             'examID'      : '<?=$examID?>',
             'classesID'   : '<?=$classesID?>',
@@ -378,7 +382,7 @@
                         $('#send_pdf').removeAttr('disabled');
                         if( response.to) {
                             $("#to_error").html("<?=$this->lang->line('admitcardreport_mail_to')?>").css("text-align", "left").css("color", 'red');
-                        } 
+                        }
                         if( response.subject) {
                             $("#subject_error").html("<?=$this->lang->line('admitcardreport_mail_subject')?>").css("text-align", "left").css("color", 'red');
                         }

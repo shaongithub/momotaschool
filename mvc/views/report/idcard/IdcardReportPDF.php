@@ -161,6 +161,10 @@
                 <div class="idcardreport-schooladdress">
                     <?=$siteinfos->address?>
                 </div>
+                        <ol>
+                        <li><font size="2" color="black">This card is not transferable.</font></li>
+                        <li><font size="2" color="black">Telephone: 123456, 789654</font></li>
+                        </ol>
                 <div class="idcardreport-bottom">
                     <div class="idcardreport-qrcode">
                         <img style="width:90px;height: 80px; padding-top: 12px" src="<?=base_url('uploads/idQRcode/'.$filename.'.png')?>" alt="">

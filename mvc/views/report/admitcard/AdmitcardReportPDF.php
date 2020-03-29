@@ -23,9 +23,9 @@
                                 }
                             ?>
                         </td>
-                        <td style="width:84%"> 
-                            <h2 class="title"><?=$siteinfos->sname?></h2>
-                            <h5 class="address"><?=$siteinfos->address?></h5> 
+                        <td style="width:84%">
+                            <h2 class="title" color="black"><?=$siteinfos->sname?></h2>
+                            <h5 class="address" color="black"><?=$siteinfos->address?></h5>
                         </td>
                         <td style="width:8%">
                             <img src="<?=imagelink($student->photo)?>" alt="" style="height :50px; width:50px;margin-top:10px;">
@@ -51,6 +51,7 @@
                                 <td><?=$this->lang->line('admitcardreport_subject_code')?></td>
                                 <td><?=$this->lang->line('admitcardreport_subject_name')?></td>
                                 <td><?=$this->lang->line('admitcardreport_subject_mark')?></td>
+                                <td><?=$this->lang->line('admitcardreport_invisilator_signature')?></td>
                             </tr>
                             <?php $i= 0; if(count($subjects)) { foreach($subjects as $subject) { if($subject->type == 1) { $i++; ?>
                                 <tr>
@@ -58,6 +59,7 @@
                                     <td><?=$subject->subject_code?></td>
                                     <td><?=$subject->subject?></td>
                                     <td><?=$subject->finalmark?></td>
+                                    <td></td>
                                 </tr>
                             <?php } } }
                             if(isset($subjects[$student->sroptionalsubjectID])) { $opsubject = $subjects[$student->sroptionalsubjectID]; ?>
@@ -73,6 +75,8 @@
                 </div>
                 <div class="admitcardfooter">
                     <div class="account_signature"></div>
+                    <br>
+                    <br>
                     <div class="headmaster_signature"><?=$this->lang->line('admitcardreport_signature')?></div>
                 </div>
             </div>
@@ -93,6 +97,6 @@
                 <?=$this->lang->line('admitcardreport_data_not_found')?>
             </div>
         <?php } ?>
-    </div> 
+    </div>
 </body>
 </html>

@@ -164,7 +164,7 @@
                                                 }
                                             ?>
                                         </td>
-                                        <td style="width:84%">
+                                        <td style="width:84%>
                                             <h2 color="black"><?=$siteinfos->sname?></h2>
                                             <h5 color="black"><?=$siteinfos->address?></h5>
                                         </td>

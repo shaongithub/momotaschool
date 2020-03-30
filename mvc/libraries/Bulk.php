@@ -10,7 +10,7 @@ class Bulk {
 	public function __construct () {
 		$this->ci =& get_instance();
         $this->ci->load->model('smssettings_m');
-        
+
         $bulk_bind = array();
         $get_bulks = $this->ci->smssettings_m->get_order_by_bulk();
         foreach ($get_bulks as $key => $get_bulk) {
@@ -19,7 +19,7 @@ class Bulk {
 
         $this->username = $bulk_bind['bulk_username'];
         $this->password = $bulk_bind['bulk_password'];
-        $this->url =  'https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0';
+        $this->url =  'http://66.45.237.70/api.php';
         $this->port = 443;
 	}
 
@@ -28,7 +28,7 @@ class Bulk {
 	}
 
 	public function ping() {
-		$pingurl =  'https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0';
+		$pingurl =  'http://66.45.237.70/api.php';
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_URL, $pingurl);
 		curl_setopt($ch, CURLOPT_POST, 1);
@@ -70,7 +70,7 @@ class Bulk {
 	    	$post_fields['stop_dup_id'] = make_stop_dup_id();
 	  	}
 	  	$post_body = '';
-	  	
+
 	  	foreach( $post_fields as $key => $value ) {
 	    	$post_body .= urlencode( $key ).'='.urlencode( $value ).'&';
 	  	}
@@ -121,7 +121,7 @@ class Bulk {
     		$status_code = $api_result[0];
     		$sms_result['api_status_code'] = $status_code;
     		$sms_result['api_message'] = $api_result[1];
-    		
+
     		if ( count( $api_result ) != 3 ) {
       			$sms_result['details'] .= "Error: could not parse valid return data from server.\n" . count( $api_result );
     		} else {

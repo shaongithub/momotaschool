@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <div class="profileArea">
-        <?php featureheader($siteinfos);?>
-            <div class="mainArea">
+    <div class="makepaymentreport">
+        <div class="mainArea">
+            <div class="areaTop" class="center">
+                <div class="studentImage">
+                    <img class="studentImg" src="<?=pdfimagelink($siteinfos->photo)?>" alt="">
+                </div>
+                <div class="studentProfile">
+                    <div class="singleItem">
+                        <div class="single_value"> <?=$siteinfos->sname?></div>
+                    </div>
+                    <div class="singleItem">
+                        <div class="single_value"> <?=$siteinfos->address?></div>
+                    </div>
+                    <div class="singleItem">
+                        <div class="single_value"> <?php echo"Phone:" ?> <?=$siteinfos->phone?></div>
+                    </div>
+                    <div class="singleItem">
+                        <div class="single_value"> <?php echo "www.momotainstitue.com" ?></div>
+                    </div>
+                </div>
+            </div>
+        <br>
                 <div class="areaTop">
                     <div class="studentImage">
                         <img class="studentImg" src="<?=pdfimagelink($user->photo)?>" alt="">
@@ -25,10 +44,6 @@
                             <div class="single_value">: <?=$user->sex?></div>
                         </div>
                         <div class="singleItem">
-                            <div class="single_label"><?=$this->lang->line('make_payment_dob')?></div>
-                            <div class="single_value">: <?php if($user->dob) { echo date("d M Y", strtotime($user->dob)); } ?></div>
-                        </div>
-                        <div class="singleItem">
                             <div class="single_label"><?=$this->lang->line('make_payment_phone')?></div>
                             <div class="single_value">: <?=$user->phone?></div>
                         </div>
@@ -36,7 +51,7 @@
                 </div>
                 <div class="managesalaryArea">
                     <table class="table table-bordered">
-                        <?php 
+                        <?php
                             $rowspan = 4;
                             if(isset($make_payment->total_hours)) { ?>
                                 <tr>
@@ -84,13 +99,13 @@
                             <td><?=$this->lang->line("make_payment_comments")?></td>
                             <td><?=$make_payment->comments?></td>
                         </tr>
-          
+
                         <?php if($make_payment->salaryID == 1) { ?>
                             <tr>
                                 <td colspan="2" class="text-bold"><?=$this->lang->line('make_payment_allowances');?></td>
                                 <td colspan="2" class="text-bold"><?=$this->lang->line('make_payment_deductions');?></td>
                             </tr>
-                            <?php 
+                            <?php
                                 if(count($salaryoptions)) {
                                     $allowanceVal = 0;
                                     $deductionVal = 0;
@@ -100,7 +115,7 @@
                                     foreach ($salaryoptions as $salaryoption) {
                                         if($salaryoption->option_type == 1) {
                                             $allowanceVal++;
-                                            $allowanceArray[] = $salaryoption;      
+                                            $allowanceArray[] = $salaryoption;
                                         } elseif($salaryoption->option_type == 2) {
                                             $deductionVal++;
                                             $deductionArray[] = $salaryoption;
@@ -112,11 +127,11 @@
                                     } else {
                                         $max = $deductionVal;
                                     } ?>
-                                    
+
                                     <tr>
                                         <td class="subtable" colspan="2">
                                             <table>
-                                                    <?php for($i=0;$i<$max;$i++) { 
+                                                    <?php for($i=0;$i<$max;$i++) {
                                                         if(isset($allowanceArray[$i])) { ?>
                                                         <tr>
                                                             <td><?=$allowanceArray[$i]->label_name?></td>
@@ -127,7 +142,7 @@
                                         </td>
                                         <td class="subtable" colspan="2">
                                             <table>
-                                                    <?php for($i=0;$i<$max;$i++) { 
+                                                    <?php for($i=0;$i<$max;$i++) {
                                                         if(isset($deductionArray[$i])) { ?>
                                                 <tr>
                                                             <td><?=$deductionArray[$i]->label_name?></td>
@@ -141,7 +156,7 @@
                         <tr>
                             <td class="text-bold text-center" colspan="4"><?=$this->lang->line('make_payment_total_salary_details')?></td>
                         </tr>
-                        <?php 
+                        <?php
                             $rowspan = 4;
                             if(isset($make_payment->total_hours)) {
                                 $rowspan = 5;
@@ -150,7 +165,7 @@
                         <tr>
                             <td rowspan="<?=$rowspan?>" colspan="2"></td>
                             <td><?=$this->lang->line('make_payment_gross_salary')?></td>
-                            <?php 
+                            <?php
                                 $total_gross_salary = 0;
                                 if($make_payment->salaryID == 1) {
                                     $total_gross_salary = ($make_payment->gross_salary+$persent_salary_template->basic_salary);
@@ -165,7 +180,7 @@
                             <td><?=number_format($make_payment->total_deduction, 2)?></td>
                         </tr>
 
-                        <?php 
+                        <?php
                             if(isset($make_payment->total_hours)) {
                                 $net_hourly_rate = ($make_payment->total_hours * $make_payment->net_salary);
                                 $net_hourly_rate_grp = '('.$make_payment->total_hours. 'X' . $make_payment->net_salary .')';
@@ -194,7 +209,15 @@
                     </table>
                 </div>
             </div>
+
+        <br>
+        <br>
+        <div class="singleItem">
+            <div class="single_value"><?=$this->lang->line('make_payment_account_sigmature')?></div>
+            <div class="single_value" class="right"><?=$this->lang->line('make_paymentheadmaster_signature')?></div>
+        </div>
     </div>
-    <?php featurefooter($siteinfos);?>
+
+
 </body>
 </html>

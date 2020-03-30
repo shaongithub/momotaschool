@@ -37,6 +37,8 @@ $lang['make_payment_net_salary_hourly'] = "Net Salary (Hourly)";
 $lang['make_payment_month'] = "Month";
 
 $lang['make_payment_payment_amount'] = 'Payment Amount';
+$lang['make_payment_account_sigmature'] = "Signature of Accounts's";
+$lang['make_paymentheadmaster_signature'] = "Signature of Principal's";
 $lang['make_payment_payment_method'] = 'Payment Method';
 $lang['make_payment_comments'] = 'Comments';
 $lang['make_payment_total_hours'] = 'Total Hours';
@@ -72,7 +74,7 @@ $lang['mail_subject'] = "The Subject field is required";
 $lang['mail_success'] = 'Email send successfully';
 $lang['mail_error'] = 'Oops, Email not send';
 
-$lang['make_payment_type'] = 'Type';
+$lang['make_payment_type'] = 'Designation';
 $lang['make_payment_to'] = 'To';
 $lang["make_payment_subject"] = "Subject";
 $lang['make_payment_message'] = 'Message';

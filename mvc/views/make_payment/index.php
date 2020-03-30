@@ -8,15 +8,25 @@
             <li class="active"><?=$this->lang->line('menu_make_payment')?></li>
         </ol>
     </div><!-- /.box-header -->
+    <div id="printablediv">
+        <style type="text/css">
+            .makepaymentreport {
+                max-width:794px;
+                margin-left: auto;
+                margin-right: auto;
+                -webkit-print-color-adjust: exact;
+                overflow: hidden;
+            }
+            </style>
     <!-- form start -->
-    <div class="box-body">
+    <div class="box-body" style="margin-bottom: 50px;">
         <div class="row">
             <div class="col-sm-12">
 
                 <form method="POST">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="row">
+                            <div class="row" class="makepaymentreport">
                                 <div class="col-md-4 col-md-offset-4">
                                     <div class="<?php echo form_error('role') ? 'form-group has-error' : 'form-group'; ?>" >
                                         <label for="role" class="control-label">
@@ -79,17 +89,18 @@
                                             <a href="<?=base_url("make_payment/add/$userID/$user->usertypeID")?>" class="btn btn-sm btn-success"><?=$this->lang->line('make_payment_make_payment')?></a>
                                         </td>
                                     <?php } ?>
-                                    
+
                                 </tr>
                             <?php $i++; }} ?>
                         </tbody>
                     </table>
                 </div>
                 <?php } ?>
-               
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script type="text/javascript">
@@ -105,7 +116,7 @@
                 url: "<?=base_url('make_payment/role_list')?>",
                 data: "id=" + role,
                 dataType: "html",
-                success: function(data) {  
+                success: function(data) {
                     window.location.href = data;
                 }
             });

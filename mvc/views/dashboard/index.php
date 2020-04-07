@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <script type="text/javascript"> 
+        <script type="text/javascript">
             $(document).ready(function() {
                 var count = 7;
                 var countdown = setInterval(function(){
@@ -33,7 +33,7 @@
                     <a href="<?=base_url('dashboard/update')?>" class="btn btn-success">Update</a>
                 </div>
             </div>
-        <?php } ?> 
+        <?php } ?>
     <?php } ?>
 
     <?php

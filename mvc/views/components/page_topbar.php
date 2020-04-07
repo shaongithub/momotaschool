@@ -13,7 +13,7 @@
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="dropdown notifications-menu">
-                            <a target="_blank" href="<?=base_url('frontend/index')?>" class="dropdown-toggle" data-toggle="tooltip" title="<?=$this->lang->line('menu_visit_site')?>" data-placement="bottom">
+                            <a target="_blank" href="https://momotainstitute.com/" class="dropdown-toggle" data-toggle="tooltip" title="<?=$this->lang->line('menu_visit_site')?>" data-placement="bottom">
                                 <i class="fa fa-globe"></i>
                             </a>
                         </li>
@@ -37,10 +37,10 @@
                         <?php if(isset($siteinfos->language_status) && $siteinfos->language_status == 0) { ?>
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img class="language-img" src="<?php 
-                                    $image = $this->session->userdata('lang'); 
-                                    echo base_url('uploads/language_image/'.$image.'.png'); ?>" 
-                                    /> 
+                                    <img class="language-img" src="<?php
+                                    $image = $this->session->userdata('lang');
+                                    echo base_url('uploads/language_image/'.$image.'.png'); ?>"
+                                    />
                                     <span class="label label-warning">15</span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -221,12 +221,12 @@
 
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="<?=imagelink($this->session->userdata('photo')) 
+                                <img src="<?=imagelink($this->session->userdata('photo'))
                                 ?>" class="user-logo" alt="" />
                                 <span>
                                     <?=(strlen($this->session->userdata('name')) > 10) ? substr($this->session->userdata('name'), 0, 10) : $this->session->userdata('name')?>
                                     <i class="caret"></i>
-                                </span>   
+                                </span>
                             </a>
 
                             <ul class="dropdown-menu">
@@ -234,13 +234,13 @@
                                     <div class="col-xs-6 text-center">
                                         <a href="<?=base_url("profile/index")?>">
                                             <div><i class="fa fa-briefcase"></i></div>
-                                            <?=$this->lang->line("profile")?> 
+                                            <?=$this->lang->line("profile")?>
                                         </a>
                                     </div>
                                     <div class="col-xs-6 text-center">
                                         <a href="<?=base_url("signin/cpassword")?>">
                                             <div><i class="fa fa-lock"></i></div>
-                                            <?=$this->lang->line("change_password")?> 
+                                            <?=$this->lang->line("change_password")?>
                                         </a>
                                     </div>
                                 </li>
@@ -248,7 +248,7 @@
                                     <div class="text-center">
                                         <a href="<?=base_url("signin/signout")?>">
                                             <div><i class="fa fa-power-off"></i></div>
-                                            <?=$this->lang->line("logout")?> 
+                                            <?=$this->lang->line("logout")?>
                                         </a>
                                     </div>
                                 </li>

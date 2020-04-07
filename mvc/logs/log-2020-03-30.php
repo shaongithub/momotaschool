@@ -85,3 +85,35 @@ ERROR - 2020-03-30 12:56:50 --> Could not find the language line "admitcardrepor
 ERROR - 2020-03-30 12:57:23 --> Could not find the language line "admitcardreport_signature"
 ERROR - 2020-03-30 13:03:00 --> Could not find the language line "admitcardreport_signature"
 ERROR - 2020-03-30 13:13:02 --> Severity: Parsing Error --> syntax error, unexpected 's' (T_STRING) C:\xampp\htdocs\school\mvc\language\english\make_payment_lang.php 40
+ERROR - 2020-03-30 16:24:28 --> Severity: 8192 --> mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\school\mvc\libraries\Bulk.php 24
+ERROR - 2020-03-30 16:24:28 --> Severity: Warning --> mysql_num_rows() expects parameter 1 to be resource, boolean given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 25
+ERROR - 2020-03-30 16:24:29 --> Severity: Notice --> Undefined variable: mysql_query C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:29 --> Severity: Warning --> mysql_fetch_array() expects parameter 1 to be resource, null given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:29 --> Severity: Notice --> Undefined variable: username C:\xampp\htdocs\school\mvc\libraries\Bulk.php 40
+ERROR - 2020-03-30 16:24:29 --> Severity: Notice --> Undefined variable: password C:\xampp\htdocs\school\mvc\libraries\Bulk.php 41
+ERROR - 2020-03-30 16:24:29 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\school\main\core\Exceptions.php:271) C:\xampp\htdocs\school\main\core\Common.php 570
+ERROR - 2020-03-30 16:24:29 --> Severity: Error --> Call to undefined method MY_Loader::string_to_utf16_hex() C:\xampp\htdocs\school\mvc\libraries\Bulk.php 42
+ERROR - 2020-03-30 16:24:29 --> Severity: 8192 --> mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\school\mvc\libraries\Bulk.php 24
+ERROR - 2020-03-30 16:24:30 --> Severity: Warning --> mysql_num_rows() expects parameter 1 to be resource, boolean given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 25
+ERROR - 2020-03-30 16:24:30 --> Severity: Notice --> Undefined variable: mysql_query C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:30 --> Severity: Warning --> mysql_fetch_array() expects parameter 1 to be resource, null given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:30 --> Severity: Notice --> Undefined variable: username C:\xampp\htdocs\school\mvc\libraries\Bulk.php 40
+ERROR - 2020-03-30 16:24:30 --> Severity: Notice --> Undefined variable: password C:\xampp\htdocs\school\mvc\libraries\Bulk.php 41
+ERROR - 2020-03-30 16:24:30 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\school\main\core\Exceptions.php:271) C:\xampp\htdocs\school\main\core\Common.php 570
+ERROR - 2020-03-30 16:24:30 --> Severity: Error --> Call to undefined method MY_Loader::string_to_utf16_hex() C:\xampp\htdocs\school\mvc\libraries\Bulk.php 42
+ERROR - 2020-03-30 16:24:31 --> Severity: 8192 --> mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\school\mvc\libraries\Bulk.php 24
+ERROR - 2020-03-30 16:24:31 --> Severity: Warning --> mysql_num_rows() expects parameter 1 to be resource, boolean given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 25
+ERROR - 2020-03-30 16:24:31 --> Severity: Notice --> Undefined variable: mysql_query C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:31 --> Severity: Warning --> mysql_fetch_array() expects parameter 1 to be resource, null given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:24:31 --> Severity: Notice --> Undefined variable: username C:\xampp\htdocs\school\mvc\libraries\Bulk.php 40
+ERROR - 2020-03-30 16:24:31 --> Severity: Notice --> Undefined variable: password C:\xampp\htdocs\school\mvc\libraries\Bulk.php 41
+ERROR - 2020-03-30 16:24:31 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\school\main\core\Exceptions.php:271) C:\xampp\htdocs\school\main\core\Common.php 570
+ERROR - 2020-03-30 16:24:31 --> Severity: Error --> Call to undefined method MY_Loader::string_to_utf16_hex() C:\xampp\htdocs\school\mvc\libraries\Bulk.php 42
+ERROR - 2020-03-30 16:25:48 --> Severity: 8192 --> mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\school\mvc\libraries\Bulk.php 24
+ERROR - 2020-03-30 16:25:48 --> Severity: Warning --> mysql_num_rows() expects parameter 1 to be resource, boolean given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 25
+ERROR - 2020-03-30 16:25:48 --> Severity: Notice --> Undefined variable: mysql_query C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:25:48 --> Severity: Warning --> mysql_fetch_array() expects parameter 1 to be resource, null given C:\xampp\htdocs\school\mvc\libraries\Bulk.php 28
+ERROR - 2020-03-30 16:25:49 --> Severity: Notice --> Undefined variable: username C:\xampp\htdocs\school\mvc\libraries\Bulk.php 40
+ERROR - 2020-03-30 16:25:49 --> Severity: Notice --> Undefined variable: password C:\xampp\htdocs\school\mvc\libraries\Bulk.php 41
+ERROR - 2020-03-30 16:25:49 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\school\main\core\Exceptions.php:271) C:\xampp\htdocs\school\main\core\Common.php 570
+ERROR - 2020-03-30 16:25:49 --> Severity: Error --> Call to undefined method MY_Loader::string_to_utf16_hex() C:\xampp\htdocs\school\mvc\libraries\Bulk.php 42
